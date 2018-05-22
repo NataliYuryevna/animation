@@ -1,0 +1,89 @@
+body{
+	padding: 0;
+    margin: 10px;
+}
+
+#table{
+    text-align: center;
+}
+
+#table ol{
+    padding: 0;
+    margin: 0;
+}
+
+#table ol li{
+	list-style-type: none;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin: 2px;
+	background-color: blue;
+	text-align: center;
+	line-height: 50px;
+	color: rgb(255, 255, 255);
+}
+
+#console{
+	width: 200px;
+	height: 150px;
+	overflow: auto;
+	margin: 5px auto;
+	padding: 5px 10px;
+	background-color: blue;
+	color: rgb(255, 255, 255);
+}
+
+#buttonStart{
+	background-color: blue;
+	width: 80px;
+	height: 30px;
+	color: rgb(255, 255, 255);
+	border: 0;
+	border-radius: 5px;
+	margin: 10px auto;
+	display: block;	
+}
+
+#buttonStart:disabled {
+    opacity: 0.4;
+}
+
+@-moz-keyframes rotating{ /* Для Firefox */
+	from { -moz-transform: rotateX(0deg); }
+	to   { -moz-transform: rotateX(180deg); }
+} 
+
+@-ms-keyframes rotating{ /* Для IE */
+	from { -ms-transform: rotateX(0deg); }
+	to   { -ms-transform: rotateX(180deg); }
+}
+
+@-webkit-keyframes rotating{ /* Для Safari, Chrome, iOS */
+	from { -webkit-transform: rotateX(0deg); }
+	to   { -webkit-transform: rotateX(180deg); }
+}
+
+@-o-keyframes rotating{ /* Для Opera */
+	from { -o-transform: rotateX(0deg); }
+	to   { -o-transform: rotateX(180deg); }
+}
+
+@keyframes rotating{
+	from { transform: rotateX(0deg); }
+	to   { transform: rotateX(180deg); }
+}
+
+#table .anim {
+	-moz-animation:    rotating 800ms linear; /* Для Firefox */
+	-ms-animation:     rotating 800ms linear; /* Для IE */
+	-webkit-animation: rotating 800ms linear; /* Для Safari, Chrome, iOS */
+	-o-animation:      rotating 800ms linear; /* Для Opera */
+	animation:         rotating 800ms linear;
+
+	-moz-transform: rotateX(180deg);
+	-ms-transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+	-o-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
