@@ -21,14 +21,12 @@ else{
 			PrefixedEvent(table.children[i].children[j], "AnimationStart", 
 				function(){
 					cnsl.innerHTML += "<br>cell " + this.innerHTML + " animation start";
-					console.log("cell " + this.innerHTML + " animation start");
 					cnsl.scrollTop = cnsl.scrollHeight;
 				}
 				, pfx);
 			PrefixedEvent(table.children[i].children[j], "AnimationEnd", 
 				function(){
 					cnsl.innerHTML += "<br>cell " + this.innerHTML + " animation end";
-					console.log("cell " + this.innerHTML + " animation end");
 					if (this.className === "endAnim anim"){
 						animEnd();
 					}
@@ -45,7 +43,6 @@ if (boolean === true){ /*если все условия выполнились*/
 		this.value = "in progress";
 		this.disabled = true;
 		cnsl.innerHTML = "progress start";
-		console.log("progress start");
 		var interval = 0;
 		for (var i = 0; i < table.children.length; i++){
 			for( var j = 0; j < table.children[i].children.length; j++){
@@ -77,6 +74,5 @@ function animEnd(){/*конец анимации, приводим объякт�
 		}
 	}
 	cnsl.innerHTML += "<br>progress end";
-	console.log("progress end");
 	btn.disabled = false;
 }
